@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var a bool = true     // Boolean
+	var b int = 5         // integer
+	var c float32 = 3.14  //floating point number
+	var d string = " Hi!" // string
+
+	fmt.Print("===========================================================\n")
+	fmt.Println("SELAMAT DATANG PADA PROGRAM TIPE DATA DENGAN BAHASA GOLANG")
+	fmt.Print("===========================================================\n")
+
+	fmt.Print(" Tipe data Boolean adalah : ", a, "\n")
+	fmt.Print(" Tipe data Integer adalah : ", b, "\n")
+	fmt.Print(" Tipe data float adalah   : ", c, "\n")
+	fmt.Print(" Tipe data string adalah  : ", d, "\n")
+
+}
