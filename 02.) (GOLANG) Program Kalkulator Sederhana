@@ -1,0 +1,71 @@
+package main
+
+import (
+	"fmt"
+)
+
+func author() {
+	fmt.Println("thanks for using this program")
+	fmt.Println("Made by Ikkoc_awinata")
+}
+
+func judul() {
+	fmt.Println("======================================")
+	fmt.Println("\t KALKULATOR SEDERHANA \t")
+	fmt.Println("======================================")
+}
+
+func main() {
+	var a, b, pilih, hasil int
+	var hasil1 float64
+	var masukan rune
+
+	judul()
+	fmt.Println("PILIH OPERATOR ARITMATIKA")
+	fmt.Println("1. PENJUMLAHAN")
+	fmt.Println("2. PENGURANGAN")
+	fmt.Println("3. PERKALIAN")
+	fmt.Println("4. PEMBAGIAN")
+	fmt.Println("5. MODULUS")
+
+	for {
+		fmt.Println("========================================")
+		fmt.Print("Masukkan angka pertama: ")
+		fmt.Scanln(&a)
+
+		fmt.Print("Masukkan angka kedua: ")
+		fmt.Scanln(&b)
+		fmt.Println("========================================")
+
+		fmt.Print("Masukkan pilihan sesuai tabel anda: ")
+		fmt.Scanln(&pilih)
+		if pilih == 1 {
+			hasil = a + b
+			fmt.Printf("Hasil Penjumlahan %d + %d = %d\n", a, b, hasil)
+		} else if pilih == 2 {
+			hasil = a - b
+			fmt.Printf("Hasil Pengurangan %d - %d = %d\n", a, b, hasil)
+		} else if pilih == 3 {
+			hasil = a * b
+			fmt.Printf("Hasil Perkalian %d * %d = %d\n", a, b, hasil)
+		} else if pilih == 4 {
+			hasil1 = float64(a) / float64(b)
+			fmt.Printf("Hasil Pembagian %d / %d = %.2f\n", a, b, hasil1)
+		} else if pilih == 5 {
+			hasil = a % b
+			fmt.Printf("Hasil Modul %d %% %d = %d\n", a, b, hasil)
+		} else {
+			fmt.Println("pilihan tidak sesuai")
+		}
+		fmt.Println()
+
+		fmt.Println("==========================================")
+		fmt.Print("mau coba lagi? ")
+		fmt.Scanln(&masukan)
+		if masukan != 'Y' && masukan != 'y' {
+			break
+		}
+	}
+
+	author()
+}
