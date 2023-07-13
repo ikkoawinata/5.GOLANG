@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+)
+
+func author() {
+	fmt.Print("Terima kasih telah menggunakan program ini\n")
+	fmt.Print("Made by ikkoc_awinata\n")
+}
+
+func judul() {
+	fmt.Print("==================================================\n")
+	fmt.Print("   BELAJAR PERULANGAN WHILE MENGGUNAKAN PYTHON \n")
+	fmt.Print("==================================================\n")
+}
+
+func main() {
+	judul()
+
+	//jika sama dengan harus dikasih titik 2 (:)
+	number := 1
+
+	for number <= 5 {
+		fmt.Println(number)
+		number++
+	}
+}
