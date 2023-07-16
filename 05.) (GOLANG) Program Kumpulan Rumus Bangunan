@@ -1,0 +1,428 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func sambutan() {
+	fmt.Println("======================================================================")
+	fmt.Println("          S E L A M A T   D A T A N G   D I   P R O G R A M ")
+	fmt.Println("        KUMPULAN RUMUS LUAS PERMUKAAN BANGUNAN DAN VOLUME")
+	fmt.Println("                          BAHASA GOLANG                              ")
+	fmt.Println("======================================================================")
+}
+
+func table() {
+	fmt.Println("================================================================================")
+	fmt.Println("A. R U M U S  K E L I L I N G  &  L U A S  B A N G U N  D A T A R \t\t ")
+	fmt.Println("================================================================================")
+	fmt.Println("1. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 22/7)               \t|")
+	fmt.Println("2. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 22/7)                \t|")
+	fmt.Println("3. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 3,14)               \t|")
+	fmt.Println("4. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 3,14)                \t|")
+	fmt.Println("5. | Menghitung Panjang Busur pada Lingkaran                              \t|")
+	fmt.Println("6. | Menghitung Keliling Persegi                                          \t|")
+	fmt.Println("7. | Menghitung Luas Persegi                                              \t|")
+	fmt.Println("8. | Menghitung Keliling Persegi Panjang                                  \t|")
+	fmt.Println("9. | Menghitung Luas Persegi Panjang                                      \t|")
+	fmt.Println("10.| Menghitung Keliling Jajar Genjang                                    \t|")
+	fmt.Println("11.| Menghitung Luas Jajar Genjang                                        \t|")
+	fmt.Println("12.| Menghitung Keliling Segitiga                                         \t|")
+	fmt.Println("13.| Menghitung Luas Segitiga                                             \t|")
+	fmt.Println("14.| Menghitung Luas Belah Ketupat                                        \t|")
+	fmt.Println("15.| Menghitung Luas Trapesium                                            \t|")
+	fmt.Println("==============================================================================")
+	fmt.Println("B. R U M U S  L U A S  P E R M U K A A N  &  V O L U M E  B A N G U N  R U A N G")
+	fmt.Println("==============================================================================")
+	fmt.Println("16.| Menghitung Luas Kubus                                                \t|")
+	fmt.Println("17.| Menghitung Volume Kubus                                              \t|")
+	fmt.Println("18.| Menghitung Luas Balok                                                \t|")
+	fmt.Println("19.| Menghitung Volume Balok                                              \t|")
+	fmt.Println("20.| Menghitung Luas Permukaan Limas Segiempat                            \t|")
+	fmt.Println("21.| Menghitung Volume Limas Segiempat                                    \t|")
+	fmt.Println("22.| Menghitung Volume Prisma Segitiga                                    \t|")
+	fmt.Println("23.| Menghitung Luas Prisma Segitiga                                      \t|")
+	fmt.Println("24.| Menghitung Volume Limas Segitiga                                     \t|")
+	fmt.Println("25.| Menghitung Luas Selimut Tabung (Jari-Jari)                           \t|")
+	fmt.Println("26.| Menghitung Luas Selimut Tabung (diameter)                            \t|")
+	fmt.Println("27.| Menghitung Luas Permukaan Tabung (Jari-Jari)                         \t|")
+	fmt.Println("28.| Menghitung Volume Tabung (Jari-Jari)                                 \t|")
+	fmt.Println("29.| Menghitung Luas Selimut Kerucut                                      \t|")
+	fmt.Println("30.| Menghitung Luas Permukaan Kerucut                                    \t|")
+	fmt.Println("31.| Menghitung Volume Kerucut                                            \t|")
+	fmt.Println("32.| Menghitung Luas Bola                                                 \t|")
+	fmt.Println("33.| Menghitung Volume Bola                                               \t|")
+	fmt.Println("==============================================================================")
+}
+
+func main() {
+	var pilihan int
+	var keliling, phi, r, d, rumus1, rumus2, busur, L, panjang, lebar, alas, t, a, p, q, T, d1, d2, rumus, p1, L1, T1, rumusss, L_alas, L_limas, L_segitiga, sisi, LALAS, sqrt, sisisegitiga, L_selimut, Lp_PS, pytagoras float64
+	sambutan()
+	table()
+
+	for {
+		fmt.Print("\nSilahkan masukan pilihan anda yang sesuai [1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/28/29/30/31/32/33] ? : ")
+		fmt.Scan(&pilihan)
+
+		switch pilihan {
+		case 1:
+			fmt.Print(" ---- 1.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 22/7) ----")
+			fmt.Print("Masukkan jari-jari lingkaran: ")
+			fmt.Scan(&r)
+			phi = 22.0 / 7.0
+			keliling = float64(2 * phi * r)
+			fmt.Print(keliling)
+			fmt.Print("Rumusnya yaitu : Keliling = 2 * 22/7 * r = 2 * 22/7 * ", r)
+			fmt.Print("\nkeliling lingkaran dengan jari-jari", r, " adalah = ", keliling)
+			break
+
+		case 2:
+			fmt.Println(" ---- 2.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 22/7)  ----")
+			fmt.Print("Masukkan diameter lingkaran: ")
+			fmt.Scan(&d)
+			keliling = 22.0 / 7.0 * d
+			fmt.Println("Rumusnya yaitu : Keliling = 22/7 * d = 22/7 * ", d)
+			fmt.Println("Keliling lingkaran dengan diameter", d, " adalah = ", keliling)
+
+		case 3:
+			fmt.Println(" -----3.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 3,14) -----")
+			fmt.Print("Masukkan jari-jari lingkaran: ")
+			fmt.Scan(&r)
+			keliling = 2 * 3.14 * r
+			fmt.Println("Rumusnya yaitu : Keliling = 2 * 3.14 * r = 2 * 3.14 *", r)
+			fmt.Println("Keliling lingkaran dengan jari-jari ", r, "adalah = ", keliling)
+
+		case 4:
+			fmt.Println(" -----4.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 3,14) -----")
+			fmt.Println("Masukkan diameter lingkaran: ")
+			fmt.Scan(&d)
+			keliling = 3.14 * d
+			fmt.Println("Rumusnya yaitu : Keliling = 3.14 * d = 3.14 *", d)
+			fmt.Println("Keliling lingkaran dengan diameter ", d, " adalah =  cm ", keliling)
+
+		case 5:
+			fmt.Println(" ---- 5.) MENGHITUNG PANJANG BUSUR LINGKARAN -----")
+			fmt.Println("Masukkan busur lingkaran: ")
+			fmt.Scan(&busur)
+			fmt.Println("Masukkan jari-jari atau diameter busur lingkaran : ")
+			fmt.Scan(&r)
+			rumus1 = busur / 360.0 * 22.0 / 7.0 * r * 2
+			rumus2 = busur / 360.0 * 3.14 * r * 2
+			fmt.Println(" Rumus 1 (phi = 22/7) yaitu = busur/360*phi*r*2 = ", busur, "/ 360 * 22/7 *", r, " * 2 = ", rumus1, " cm ")
+			fmt.Println(" Rumus 2 (phi = 3.14) yaitu = busur/360*phi*r*2 = ", busur, "/ 360 * 22/7 *", r, " * 2 = ", rumus2, " cm ")
+
+		case 6:
+			fmt.Println("---- 6.) MENGHITUNG KELILING PERSEGI ----")
+			fmt.Println("Masukkan sisi persegi: ")
+			fmt.Scan(&d)
+			keliling = 4 * d
+			fmt.Println("Rumusnya yaitu : Keliling = 4 * sisi = 4 *", d)
+			fmt.Println("Keliling persegi dengan sisi", d, " adalah = ", keliling, " cm ")
+
+		case 7:
+			fmt.Println("---- 7.) MENGHITUNG LUAS PERSEGI ---")
+			fmt.Println("Masukkan sisi persegi: ")
+			fmt.Scan(&d)
+			L = d * d
+			fmt.Println("Rumusnya yaitu : Keliling = sisi * sisi = ", d, " * ", d, " = ", L)
+			fmt.Println("Luas persegi dengan sisi ", d, " * ", d, " adalah =", L, " cm ")
+
+		case 8:
+			fmt.Println("--- 8.) MENGHITUNG KELILING PERSEGI PANJANG ----")
+			fmt.Println("Masukkan panjang bangunan : ")
+			fmt.Scan(&panjang)
+			fmt.Println("Masukkan lebar bangunan : ")
+			fmt.Scan(&lebar)
+			keliling = 2 * (panjang + lebar)
+			fmt.Println("Rumusnya yaitu : Keliling = 2 * (panjang + lebar) = 2 * (", panjang, " + ", lebar, " ) = ", keliling)
+
+		case 9:
+			fmt.Println("---- 9.) MENGHITUNG LUAS PERSEGI PANJANG ----")
+			fmt.Println("Masukkan panjang bangunan : ")
+			fmt.Scan(&panjang)
+			fmt.Println("Masukkan lebar bangunan : ")
+			fmt.Scan(&lebar)
+			L = (panjang * lebar)
+			fmt.Println("Rumusnya yaitu : Luas = panjang * lebar = ", panjang, " * ", lebar, " = ", L)
+
+		case 10:
+			fmt.Println("---- 10.) MENGHITUNG KELILING JAJAR GENJANG ----")
+			fmt.Println("Masukkan panjang bangunan : ")
+			fmt.Scan(&panjang)
+			fmt.Println("Masukkan lebar bangunan : ")
+			fmt.Scan(&lebar)
+			keliling = 2 * (panjang + lebar)
+			fmt.Println("Rumusnya yaitu : keliling = 2 * (panjang + lebar) = 2 * ( ", panjang, " + ", lebar, " ) = ", keliling)
+
+		case 11:
+			fmt.Println("----  11.) MENGHITUNG LUAS JAJAR GENJANG----")
+			fmt.Println("Masukkan alas bangunan : ")
+			fmt.Scan(&alas)
+			fmt.Println("Masukkan tinggi bangunan : ")
+			fmt.Scan(&t)
+			L = alas * t
+			fmt.Println("Rumusnya yaitu : Luas = alas * tinggi = ", alas, " * ", t, " = ", L)
+
+		case 12:
+			fmt.Println("----  12.) MENGHITUNG KELILING SEGITIGA ----")
+			fmt.Println("Masukkan p : ")
+			fmt.Scan(&p)
+			fmt.Println("Masukkan q: ")
+			fmt.Scan(&q)
+			fmt.Println("Masukkan r: ")
+			fmt.Scan(&r)
+			keliling = p + q + r
+			fmt.Println("Rumusnya yaitu : Keliling = p + q + r = ", p, " + ", q, " + ", r, " = ", keliling)
+
+		case 13:
+			fmt.Println("----  13.) MENGHITUNG LUAS SEGITIGA ----")
+			fmt.Println("Masukkan alas segitiga : ")
+			fmt.Scan(&alas)
+			fmt.Println("Masukkan tinggi segitiga : ")
+			fmt.Scan(&T)
+			L = 1.0 / 2.0 * alas * T
+			fmt.Println("Rumusnya yaitu : Luas = 1/2 * alas * tinggi = 1/2 * ", alas, " * ", T, " = ", L)
+
+		case 14:
+			fmt.Println("---- 14.) MENGHITUNG LUAS BELAH KETUPAT ----")
+			fmt.Println("Masukkan diagonal 1 : ")
+			fmt.Scan(&p)
+			fmt.Println("Masukkan diagonal 2 : ")
+			fmt.Scan(&q)
+			L = 1.0 / 2.0 * p * q
+			fmt.Println("Rumusnya yaitu : Luas = 1/2 * d1 * d2 = 1/2 * ", d1, " * ", d2, " = ", L)
+
+		case 15:
+			fmt.Println("---- 15.) MENGHITUNG LUAS TRAPESIUM----")
+			fmt.Println("Masukkan a : ")
+			fmt.Scan(&p)
+			fmt.Println("Masukkan b : ")
+			fmt.Scan(&q)
+			fmt.Println("Masukkan Tinggi : ")
+			fmt.Scan(&t)
+			L = (p + q) / 2 * t
+			fmt.Println("Rumusnya yaitu : Luas = (a+b)/2 * tinggi = ( ", p, " + ", q, " ) / 2 * ", t, " = ", L)
+
+		case 16:
+			fmt.Println("---- 16.) MENGHITUNG LUAS KUBUS ----")
+			fmt.Println("Masukkan rusuk kubus : ")
+			fmt.Scan(&r)
+			rumus = 6 * r * r
+			fmt.Println("Rumusnya yaitu : Luas = 6 * rusuk * rusuk = 6 * ", r, " * ", r, " = ", rumus)
+
+		case 17:
+			fmt.Println("---- 17.) MENGHITUNG VOLUME KUBUS ----")
+			fmt.Println("Masukkan rusuk kubus : ")
+			fmt.Scan(&r)
+			rumus = math.Pow(r, 3)
+			fmt.Println("Rumusnya yaitu : Luas = rusuk * rusuk * rusuk = ", r, " * ", r, " * ", r, " = ", rumus)
+
+		case 18:
+			fmt.Println("---- 18.) MENGHITUNG LUAS BALOK ----")
+			fmt.Println("Masukkan panjang balok : ")
+			fmt.Scan(&p1)
+			fmt.Println("Masukkan lebar balok : ")
+			fmt.Scan(&L1)
+			fmt.Println("Masukkan tinggi balok : ")
+			fmt.Scan(&T1)
+			rumusss = 2*(p1*L1) + 2*(p1*T1) + 2*(L1*T1)
+			fmt.Println("Rumusnya yaitu : Luas = 2*(Panjang * lebar) + 2*(Panjang * tinggi) + 2*(lebar*tinggi) = 2 *( ", p1, " * ", L1, " ) + 2 * ( ", p1, " * ", T1, " ) +  2 * ( ", L1, " * ", T1, " ) = ", rumusss)
+
+		case 19:
+			fmt.Println("---- 19.) MENGHITUNG VOLUME BALOK ----")
+			fmt.Println("Masukkan panjang balok : ")
+			fmt.Scan(&p1)
+			fmt.Println("Masukkan luas alas balok : ")
+			fmt.Scan(&L1)
+			fmt.Println("Masukkan tinggi balok : ")
+			fmt.Scan(&T1)
+			rumusss = p1 * L1 * T1
+			fmt.Println("Rumusnya yaitu : Volume = Panjang * Luas Alas * Tinggi = ", p1, " * ", L1, " * ", T1, " = ", rumusss)
+
+		case 20:
+			fmt.Println("---- 20.) MENGHITUNG LUAS PERMUKAAN LIMAS SEGIEMPAT ----")
+			fmt.Println("Masukkan sisi alasnya : ")
+			fmt.Scan(&sisi)
+			fmt.Println("Masukkan tinggi alas segitiga : ")
+			fmt.Scan(&alas)
+			L_alas = sisi * sisi
+			L_segitiga = 1.0 / 2.0 * sisi * alas
+			L_limas = (4 * L_segitiga) + L_alas
+			fmt.Println("Rumusnya yaitu : Luas = (4 * Luas Segitiga) + Luas Alas = (4 * ", L_segitiga, " ) + ", L_alas, " = ", L_limas)
+
+		case 21:
+			fmt.Println("---- 21.) MENGHITUNG VOLUME LIMAS SEGIEMPAT ----")
+			fmt.Println("Masukkan luas alas limas : ")
+			fmt.Scan(&sisi)
+			fmt.Println("Masukkan tinggi alas limas : ")
+			fmt.Scan(&T)
+			LALAS = math.Pow(sisi, 2)
+			rumus = 1.0 / 3.0 * LALAS * T
+			fmt.Println("Rumusnya yaitu : Volume = 1/3 * Luas Alas * Tinggi = 1/3 * ", LALAS, " * ", T, " = ", rumus)
+
+		case 22:
+			fmt.Print("---- 22.) MENGHITUNG VOLUME PRISMA SEGITIGA ----")
+			fmt.Print("Masukkan a : ")
+			fmt.Scan(&a)
+			fmt.Print("Masukkan t : ")
+			fmt.Scan(&t)
+			fmt.Print("Masukkan T : ")
+			fmt.Scan(&T)
+			LALAS = 1.0 / 2.0 * a * t
+			rumus = LALAS * T
+			fmt.Print("Rumusnya yaitu : Volume = 1/2 * alas * tinggi * Tinggi = 1/2 * ", a, " * ", t, " * ", T, " = ", rumus)
+
+		case 23:
+			fmt.Println("---- 23.) MENGHITUNG LUAS PERMUKAAN PRISMA SEGITIGA----")
+			fmt.Println(" Lp Prisma Segitiga = Luas Selimut + Luas Alas")
+			fmt.Println("Masukkan panjang prisma : ")
+			fmt.Scan(&panjang)
+			fmt.Println("Masukkan sisi  lebar segitiga : ")
+			fmt.Scan(&lebar)
+			fmt.Println("Masukkan lebar prisma : ")
+			fmt.Scan(&T)
+			sisisegitiga = math.Pow(lebar, 2) - math.Pow(T, 2)
+			fmt.Println("hasil sisi segitiga yang hasilnya berbentuk akar  :(", lebar, " pangkat 2) - (", T, " pangkat 2) = ", sisisegitiga)
+			sqrt = math.Pow(sisisegitiga, 0.5)
+
+			fmt.Println("Akar dari", sisisegitiga, " yaitu : ", sqrt)
+			L_selimut = (panjang * lebar) + (panjang * T) + (panjang * sqrt)
+			fmt.Println("Luas selimutnya : ( ", panjang, " * ", lebar, " ) + ( ", panjang, " * ", T, " ) + ( ", panjang, " * ", sqrt, " ) = ", L_selimut)
+			fmt.Println("\n")
+
+			fmt.Println("eittsss ini belum selesai.....tekan enter untuk melihat hasil Luas Permukaan Prisma Segitiga")
+			L_alas = 2 * (1.0 / 2.0 * sqrt * T)
+			Lp_PS = L_alas + L_selimut
+			fmt.Println("Rumusnya yaitu : Luas = 2 * (1/2 * sisi segitiga * lebar) + (panjang * lebar ) + (panjang * lebar(sisi segitiga) + (panjang * tinggi)")
+			fmt.Println("               : Luas = 2 * (1/2 * ", sqrt, " * ", T, " ) + ( ", panjang, " * ", lebar, " ) + ( ", panjang, " * ", sisisegitiga, " (sisi segitiga) + ( ", panjang, " * ", sqrt, ") = ", Lp_PS)
+			fmt.Println("Jadi total keseluruhan luas permukaan prisma segitiga adalah : ", Lp_PS)
+
+		case 24:
+			fmt.Println("---- 24.) MENGHITUNG VOLUME LIMAS SEGITIGA ----")
+			fmt.Println("Masukkan alas limas segitiga : ")
+			fmt.Scan(&a)
+			fmt.Println("Masukkan Tinggi limas segitiga : ")
+			fmt.Scan(&t)
+			fmt.Println("Masukkan tinggi alas limas : ")
+			fmt.Scan(&T)
+			rumus = 1.0 / 3.0 * a * T * t
+			fmt.Println("Rumusnya yaitu : 1/3 *a * Tinggi limas * tinggi alas  = 1/3 * ", a, " * ", T, " * ", t, " = ", rumus)
+
+		case 25:
+			fmt.Println("---- 25.) MENGHITUNG LUAS SELIMUT TABUNG (JARI-JARI)----")
+			fmt.Println("Masukkan jari jari tabung : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan tinggi tabung : ")
+			fmt.Scan(&T)
+			rumus1 = 2 * 22.0 / 7.0 * r * T
+			rumus2 = 2 * (3.14 * r) * T
+			fmt.Println("hasil luas selimut (phi=22/7) : 2 * 22/7*r*tinggi = 2 * 22/7 * ", r, " * ", T, " = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : 2 * 22/7*r*tinggi = 2 * 22/7 * ", r, " * ", T, " = ", rumus2)
+
+		case 26:
+			fmt.Println("----26.) MENGHITUNG LUAS SELIMUT TABUNG (DIAMETER)----")
+			fmt.Println("Masukkan diameter tabung : ")
+			fmt.Scan(&d)
+			fmt.Println("Masukkan tinggi tabung : ")
+			fmt.Scan(&T)
+			rumus1 = 22.0 / 7.0 * d * T
+			rumus2 = 3.14 * d * T
+			fmt.Println("hasil luas selimut (phi=22/7) : 2 * 22/7*r*tinggi = 2 * 22/7 * ", d, " * ", T, " = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : 2 * 22/7*r*tinggi = 2 * 22/7 * ", d, " * ", T, " = ", rumus2)
+
+		case 27:
+			fmt.Println("---- 27.) MENGHITUNG LUAS PERMUKAAN TABUNG (JARI-JARI)----")
+			fmt.Println("Masukkan jari-jari tabung : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan tinggi tabung : ")
+			fmt.Scan(&T)
+			rumus1 = 2 * 22.0 / 7.0 * r * (r + T)
+			rumus2 = 2 * 3.14 * r * (r + T)
+			fmt.Println("hasil luas selimut (phi=22/7) : 2 * (22/7*r) + (r+tinggi) = 2 * (22/7 * ", r, " * ( ", r, " + ", T, " ) = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=22/7) : 2 * (3.14*r) + (r+tinggi) = 2 * (3.14 * ", r, " * ( ", r, " + ", T, " ) = ", rumus2)
+
+		case 28:
+			fmt.Println("----28.) MENGHITUNG VOLUME TABUNG (JARI-JARI)----")
+			fmt.Println("Masukkan jari-jari tabung : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan tinggi tabung : ")
+			fmt.Scan(&T)
+			rumus1 = 22.0 / 7.0 * math.Pow(r, 2) * T
+			rumus2 = 3.14 * math.Pow(r, 2) * T
+			fmt.Println("hasil luas selimut (phi=22/7) : 22/7 * (r pangkat 2) * Tinggi = 22/7 * ( ", math.Pow(r, 2), " * ", T, " = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : 3.14 * (r pangkat 2) * Tinggi = 3.14 * ( ", math.Pow(r, 2), " * ", T, " = ", rumus2)
+
+		case 29:
+			fmt.Println("----29.) MENGHITUNG LUAS SELIMUT KERUCUT----")
+			fmt.Println("Masukkan jari-jari kerucut : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan sisi kerucut : ")
+			fmt.Scan(&sisi)
+			pytagoras = math.Pow(r, 2) + math.Pow(sisi, 2)
+			sqrt = math.Pow(pytagoras, 0.5)
+			fmt.Println("hasil sisi segitiga yang hasilnya berbentuk akar ", pytagoras, " adalah : ", sqrt)
+			fmt.Println(" akar dari ", pytagoras, " adalah = ", sqrt)
+			rumus1 = 22 / 7 * r * sqrt
+			rumus2 = 3.14 * r * sqrt
+			fmt.Println("hasil luas selimut (phi=22/7) : 22/7 * r * sisi =22/7 * ", r, " * ", sqrt, " = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : 3.14 * r * sisi =3.14 * ", r, " * ", sqrt, " = ", rumus2)
+
+		case 30:
+			fmt.Println("---- 30.) MENGHITUNG LUAS PERMUKAAN KERUCUT----")
+			fmt.Println("Masukkan jari-jari kerucut : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan sisi kerucut : ")
+			fmt.Scan(&sisi)
+			rumus1 = (22.0 / 7.0 * r * (r + sisi))
+			rumus2 = (3.14 * r * (r + sisi))
+			fmt.Println("hasil luas selimut (phi=22/7) : (22/7 * r *(r + sisi)) = 22/7 * ", r, " * ( ", r, " + ", sisi, ") = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : (3,14 * r *(r + sisi)) = 3.14 * ", r, " * ( ", r, " + ", sisi, ") = ", rumus2)
+
+		case 31:
+			fmt.Println("---- 31.) MENGHITUNG VOLUME KERUCUT----")
+			fmt.Println("Masukkan jari-jari kerucut : ")
+			fmt.Scan(&r)
+			fmt.Println("Masukkan tinggi kerucut : ")
+			fmt.Scan(&sisi)
+			rumus1 = 1.0 / 3.0 * 22.0 / 7.0 * math.Pow(r, 2) * sisi
+			rumus2 = 1.0 / 3.0 * 3.14 * math.Pow(r, 2) * sisi
+			fmt.Println("hasil volume selimut (phi=22/7) : 1/3 * 22/7 * r^2 * sisi = 1/3 * 22/7 * ", math.Pow(r, 2), " * ", sisi, " = ", rumus1)
+			fmt.Println("hasil volume selimut (phi=3.14) : 1/3 * 22/7 * r^2 * sisi = 1/3 * 3.14 * ", math.Pow(r, 2), " * ", sisi, " = ", rumus2)
+
+		case 32:
+			fmt.Println("---- 32.) MENGHITUNG LUAS BOLA----")
+			fmt.Println("Masukkan jari-jari bola : ")
+			fmt.Scan(&r)
+			rumus1 = 4 * 22.0 / 7.0 * math.Pow(r, 2)
+			rumus2 = 4 * 3.14 * math.Pow(r, 2)
+			fmt.Println("hasil luas selimut (phi=22/7) : 4 * 22/7 *(r pangkat 2) = 4 * 22/7 * ( ", math.Pow(r, 2), " = ", rumus1)
+			fmt.Println("hasil luas selimut (phi=3.14) : 4 * 3.14 *(r pangkat 2) = 4 * 3.14 * ( ", math.Pow(r, 2), " = ", rumus2)
+
+		case 33:
+			fmt.Println("---- 33.) MENGHITUNG VOLUME BOLA----\n")
+			fmt.Println("Masukkan jari-jari bola : ")
+			fmt.Scan(&r)
+			rumus1 = 4.0 / 3.0 * 22.0 / 7.0 * math.Pow(r, 3)
+			rumus2 = 4.0 / 3.0 * 3.14 * math.Pow(r, 3)
+			fmt.Println("hasil luas selimut (phi=22/7) : 4.0/3.0 * 22/7 *(r pangkat 2) = 4/3 * 22/7 * ", math.Pow(r, 3), " = ", rumus1, "cm ")
+			fmt.Println("hasil luas selimut (phi=3.14) : 4.0/3.0 * 3.14 *(r pangkat 2) = 4/3 * 4.14 * ", math.Pow(r, 3), " = ", rumus2, "cm ")
+
+		default:
+			fmt.Println("Tidak sesuai dengan tabel")
+			break
+		}
+		var tanya string
+		fmt.Println()
+		fmt.Print(" Ada pesanan lain [Y/N] ? ")
+		fmt.Scan(&tanya)
+		fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+		fmt.Println("Terima kasih telah mengunakan program ini")
+		fmt.Println("Made by Ikkoc_awinata")
+
+		if tanya != "Y" && tanya != "y" {
+			break
+		}
+	}
+}
