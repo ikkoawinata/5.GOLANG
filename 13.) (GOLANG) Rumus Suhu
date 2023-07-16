@@ -1,0 +1,156 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("===============================================================")
+	fmt.Println("       S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("             M E N E N T U K A N    S U H U")
+	fmt.Println("===============================================================")
+}
+
+func tabel() {
+	fmt.Println("========================================")
+	fmt.Println("No.|             Nama Suhu              |")
+	fmt.Println("========================================")
+	fmt.Println("1  .| Derajat Celcius    -> Fahrenheit  |")
+	fmt.Println("2  .| Derajat Fahrenheit -> Celcius     |")
+	fmt.Println("3  .| Derajat Reamur     -> Fahrenheit  |")
+	fmt.Println("4  .| Derajat Fahrenheit -> Reamur      |")
+	fmt.Println("5  .| Derajat Reamur     -> Celcius     |")
+	fmt.Println("6  .| Derajat Celcius    -> Reamur      |")
+	fmt.Println("7  .| Derajat Kelvin     -> Celcius     |")
+	fmt.Println("8  .| Derajat Celcius    -> Kelvin      |")
+	fmt.Println("9  .| Derajat Kelvin     -> Fahrenheit  |")
+	fmt.Println("10 .| Derajat Fahrenheit -> Kelvin      |")
+	fmt.Println("11 .| Derajat Kelvin     -> Reamur      |")
+	fmt.Println("12 .| Derajat Reamur     -> Kelvin      |")
+	fmt.Println("========================================")
+}
+
+func main() {
+	welcome()
+	var j string
+	var c, f, r, k float64
+	var pil int
+
+	for {
+		tabel()
+		fmt.Print("Masukkan pilihan anda sesuai dengan pada tabel diatas : ")
+		fmt.Scan(&pil)
+		fmt.Print()
+
+		switch pil {
+		case 1:
+			fmt.Println("-------- 1.) Anda memilih Celcius -> Fahrenheit --------")
+			fmt.Println("Masukkan suhu celcius yang diketahui : ")
+			fmt.Scan(&c)
+			f = (9.0 / 5.0 * c) + 32
+			fmt.Println("Rumusnya yaitu : 9/5 * F + (32) = 9/5 * ", c, " + (32) = ", f, " fahrenheit ")
+			break
+
+		case 2:
+			fmt.Println("-------- 2.) Anda memilih Fahrenheit  -> Celcius --------")
+			fmt.Println("Masukkan suhu fahrenheit yang diketahui : ")
+			fmt.Scan(&f)
+			c = 5.0 / 9.0 * (f - (32))
+			fmt.Println("Rumusnya yaitu : 9/5 * C + (32) = 9/5 * ", f, " + (32) =  ", c, " celcius ")
+			break
+
+		case 3:
+			fmt.Println("-------- 3.) Anda memilih Reamur -> Fahrenheit --------")
+			fmt.Println("Masukkan suhu reamur yang diketahui : ")
+			fmt.Scan(&r)
+			f = (9.0 / 4.0 * r) + (32)
+			fmt.Println("Rumusnya yaitu : 9/4 * R + (32) = 9/4 * ", r, " + (32) = ", f, " fahrenheit ")
+			break
+
+		case 4:
+			fmt.Println("-------- 4.) Anda memilih Fahrenheit -> Reamur --------")
+			fmt.Println("Masukkan suhu fahrenheit yang diketahui : ")
+			fmt.Scan(&f)
+			r = 4.0 / 9.0 * (f - 32)
+			fmt.Println("Rumusnya yaitu : 4/9 * R + (32) = 4/9 * ", f, " + (32) = ", r, " reamur ")
+			break
+
+		case 5:
+			fmt.Println("--------  5 .) Anda memilih Reamur -> Celcius  --------")
+			fmt.Println("Masukkan suhu reamur yang diketahui : ")
+			fmt.Scan(&r)
+			c = 5.0 / 4.0 * r
+			fmt.Println("Rumusnya yaitu : 5/4 * r = 5/4 * ", r, " =  ", c, "celcius")
+			break
+
+		case 6:
+			fmt.Println("--------  6 .) Anda memilih Celcius -> Reamur  --------")
+			fmt.Println("Masukkan suhu celcius yang diketahui : ")
+			fmt.Scan(&c)
+			r = 4.0 / 5.0 * c
+			fmt.Println("Rumusnya yaitu : 4/5 * r = 4/5 * ", c, " = ", r, " reamur ")
+			break
+
+		case 7:
+			fmt.Println("-------- 7 .) Anda memilih Kelvin -> Celcius  --------")
+			fmt.Println("Masukkan suhu kelvin yang diketahui : ")
+			fmt.Scan(&k)
+			c = 273 - k
+			fmt.Println("Rumusnya yaitu : 273 - r = 273 - ", k, " = ", c, " celcius ")
+			break
+
+		case 8:
+			fmt.Println("-------- 8 .) Anda memilih Celcius -> Kelvin   --------")
+			fmt.Println("Masukkan suhu celcius yang diketahui : ")
+			fmt.Scan(&c)
+			k = 273 - c
+			fmt.Println("Rumusnya yaitu : 273 - c = 273 - ", c, " =  ", k, "kelvin")
+			break
+
+		case 9:
+			fmt.Println("-------- 9.) Anda memilih Kelvin -> Fahrenheit --------")
+			fmt.Println("Masukkan suhu kelvin yang diketahui : ")
+			fmt.Scan(&k)
+			f = 9.0/5.0*(k-273) + 32
+			fmt.Println("Rumusnya yaitu : 9/5 * (k - 273) + 32 = 9/5 * ( ", k, " * 273) + 32 = ", f, " fahrenheit ")
+			break
+
+		case 10:
+			fmt.Println("--------10 .) Anda memilih Fahrenheit -> Kelvin  --------")
+			fmt.Println("Masukkan suhu fahrenheit yang diketahui : ")
+			fmt.Scan(&f)
+			k = 5.0/9.0*(f-32) + 273
+			fmt.Println("Rumusnya yaitu : 5/9 * (f - 32) + 273 = 5/5 * ( ", f, " - 32) + 273 = ", k, " kelvin")
+			break
+
+		case 11:
+			fmt.Println("--------11 .) Anda memilih Kelvin -> Reamur --------")
+			fmt.Println("Masukkan suhu kelvin yang diketahui : ")
+			fmt.Scan(&k)
+			r = 4.0 / 5.0 * (k - 273)
+			fmt.Println("Rumusnya yaitu : 4/5 * (f - 32) + 273 = 5/5 * ( ", k, " - 32) + 273 = ", r, " reamur ")
+			break
+
+		case 12:
+			fmt.Println("--------12 .) Anda memilih Reamur -> Kelvin --------")
+			fmt.Println("Masukkan suhu reamur yang diketahui : ")
+			fmt.Scan(&r)
+			k = (5.0 / 4.0 * r) + 273
+			fmt.Println("Rumusnya yaitu : (5/4 * r) + 273 = (5/4 * ", r, ") + 273 = k ", k, " kelvin ")
+			break
+
+		default:
+			fmt.Println("Pilihan tidak sesuai. silahkan ulangi pilihan sesuai dengan tabel")
+
+		}
+		fmt.Print("Mau coba lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		fmt.Print()
+		if j != "Y" && j != "y" {
+			break
+		}
+	}
+	fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	fmt.Println("Terima kasih telah memakai program ini")
+	fmt.Println("Made by Ikkoc_awinata")
+}
