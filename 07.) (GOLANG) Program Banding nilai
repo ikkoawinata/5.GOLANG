@@ -1,0 +1,43 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("=========================================================")
+	fmt.Println("   S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("MEMBANDINGKAN BILANGAN INTEGER DAN MENGELUARKAN PESAN")
+	fmt.Println("            BAHASA PEMOGRAMAN GOLANG                      ")
+	fmt.Println("=========================================================")
+}
+
+func main() {
+	welcome()
+	var a, b int
+	var j string
+
+	for {
+		fmt.Print("MAsukkan nilai integer a : ")
+		fmt.Scan(&a)
+		fmt.Print("MAsukkan nilai integer b : ")
+		fmt.Scan(&b)
+
+		if a > b {
+			fmt.Println(("Nilai A lebih besar dari nilai B "))
+		} else if a < b {
+			fmt.Println(("nilai A lebih kecil dari nilai B"))
+		} else if a == b {
+			fmt.Println(("Nilai A dan B sama besar"))
+		}
+		fmt.Print("mau coba lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		fmt.Println(("Terima kasih telah menggunakan program ini"))
+		fmt.Println("Made by Ikkoc_awinata")
+
+		if j != "Y" && j != "y" {
+			break
+		}
+	}
+
+}
