@@ -1,0 +1,44 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("===========================================================")
+	fmt.Println("S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("              MENCARI NILAI TERBESAR ")
+	fmt.Println("===========================================================")
+}
+
+func main() {
+	welcome()
+	var a, b, c, maks int
+	var j string
+
+	for {
+		fmt.Print(("Masukkan nilai 1 : "))
+		fmt.Scan(&a)
+		fmt.Print(("Masukkan nilai 2 : "))
+		fmt.Scan(&b)
+		fmt.Print(("Masukkan nilai 3 : "))
+		fmt.Scan(&c)
+
+		if a > b {
+			maks = a
+		} else {
+			maks = b
+		}
+		if c > maks {
+			maks = c
+		}
+		fmt.Print("Nilai terbesarnya adalah : \n", maks)
+		fmt.Print("Ingin coba lagi ? [Y/N] : \n")
+		fmt.Scan((&j))
+		fmt.Print("Terima kasih telah menggunakan program ini")
+		fmt.Print(("Made by Ikkoc_awinata"))
+
+	}
+	if j != "Y" && j != "y" {
+	}
+}
