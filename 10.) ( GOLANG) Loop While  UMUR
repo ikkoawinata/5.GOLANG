@@ -1,0 +1,51 @@
+package main
+
+import "fmt"
+
+func welcome() {
+	fmt.Println("================================================================")
+	fmt.Println("               S E L A M A T   D A T A N G   D I                ")
+	fmt.Println("             PERULANGAN WHILE DAN PERCANGAN IF ELSE             ")
+	fmt.Println("                        U   M   U   R                           ")
+	fmt.Println("================================================================")
+}
+
+func main() {
+	var umur int
+	var j rune
+	welcome()
+
+	for {
+		fmt.Print("Umur anda berapa sekarang: ")
+		fmt.Scan(&umur)
+
+		for umur < 11 || umur >= 100 {
+			fmt.Printf("Saya tidak yakin umur anda: %d tahun\n", umur)
+			fmt.Println("Silahkan diulangi....")
+
+			fmt.Print("Umur anda berapa sekarang: ")
+			fmt.Scan(&umur)
+		}
+
+		fmt.Println()
+		if umur > 12 && umur < 19 {
+			fmt.Println("Wahh anda baru beranjak remaja")
+			fmt.Println("Gunakan waktu sebaik-baiknya yak")
+		}
+		if umur >= 19 && umur <= 100 {
+			fmt.Println("Anda sudah beranjak tua")
+			fmt.Println("Jadilah seseorang yang dewasa")
+		}
+		fmt.Println()
+		fmt.Print("Mau coba program lagi? [Y/N] ")
+		fmt.Scan(&j)
+
+		if j != 'Y' && j != 'y' {
+			break
+		}
+	}
+
+	fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	fmt.Println("Terima kasih telah memakai program ini")
+	fmt.Println("Made by Ikkoc_awinata")
+}
