@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("===============================================================")
+	fmt.Println("       S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("INPUT DATA DAN MENENTUKAN NILAI DATA TERKECIL DAN TERBESAR")
+	fmt.Println("===============================================================")
+}
+
+func main() {
+	welcome()
+	var n int
+	var terkecil, terbesar, bil float64
+	var j string
+
+	for {
+		fmt.Print(("Masukkan banyakanya data yang akan dimasukkan : "))
+		fmt.Scan(&n)
+		fmt.Print()
+
+		for i := 1; i <= n; i++ {
+			fmt.Print("Masukkan bilangan ke ", "-", i)
+			fmt.Scan(&bil)
+
+			if i == 1 {
+				terkecil = bil
+				terbesar = bil
+			} else if bil < terkecil {
+				terkecil = bil
+			} else if bil > terbesar {
+				terbesar = bil
+			}
+		}
+		fmt.Print("\nNilai Terkecilnya adalah : ", terkecil)
+		fmt.Print("\nNilai Terbesarnya adalah : ", terbesar)
+		fmt.Print()
+		fmt.Print("\nIngin Coba Lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		fmt.Print("Terima kasih telah menggunakan program ini")
+		fmt.Print("Made by ikkoc_awinata")
+	}
+	if j != "Y" && j != "y" {
+	}
+}
