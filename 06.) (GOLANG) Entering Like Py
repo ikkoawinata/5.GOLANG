@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var input string
+	fmt.Println("=================================================")
+	fmt.Println("            PROGRAM ENTERING LIKE PY")
+	fmt.Println("                BAHASA GOLANG")
+	fmt.Println("=================================================")
+	fmt.Println()
+	fmt.Print("")
+	fmt.Scanln(&input)
+	fmt.Println("I Love You")
+}
