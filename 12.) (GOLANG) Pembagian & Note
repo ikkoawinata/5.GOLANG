@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("===============================================================")
+	fmt.Println("       S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("              PROGRAM PEMBAGIAN MENGELUARKAN NOTE")
+	fmt.Println("                  B A H A S A   G O L A N G          ")
+	fmt.Println("===============================================================")
+}
+
+func main() {
+	welcome()
+	var a, b, hasil float64
+	var j string
+
+	for {
+		fmt.Print("Masukkan bilangan a (pembilang) : ")
+		fmt.Scan(&a)
+		fmt.Print("Masukkan bilangan b (penyebut) : ")
+		fmt.Scan(&b)
+		fmt.Print()
+
+		if b == 0 {
+			fmt.Print("Tidak dapat dibagi dengan angka nol, maka hasilnya tetap")
+		} else {
+			hasil = a / b
+			fmt.Print("Hasil dari pembagian ", a, " / ", b, " = ", hasil)
+		}
+		fmt.Print("\nMau coba program lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		if j != "Y" && j != "y" {
+			fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+			fmt.Println("Terima kasih telah memakai program ini")
+			fmt.Println("Made by Ikkoc_awinata")
+		}
+	}
+}
