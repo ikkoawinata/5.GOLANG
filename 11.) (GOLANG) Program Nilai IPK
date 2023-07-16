@@ -1,0 +1,54 @@
+package main
+
+import "fmt"
+
+func welcome() {
+	fmt.Println("================================================================")
+	fmt.Println("               S E L A M A T   D A T A N G   D I                ")
+	fmt.Println("             PERULANGAN WHILE DAN PERCANGAN IF ELSE             ")
+	fmt.Println("                        INPUT NILAI IPK                         ")
+	fmt.Println("                   B A H A S A   G O L A N G                    ")
+	fmt.Println("================================================================")
+}
+
+func main() {
+	var nim int
+	var ipk float32
+	var mhs, jur, prodi, j string
+
+	welcome()
+
+	for {
+		fmt.Print("Masukkan nama mahasiswa : ")
+		fmt.Scan(&mhs)
+		fmt.Print("Masukkan NIM mahasiswa : ")
+		fmt.Scan(&nim)
+		fmt.Print("Nama Jurusan : ")
+		fmt.Scan(&jur)
+		fmt.Print("Nama prodi  : ")
+		fmt.Scan(&prodi)
+		fmt.Print("Masukkan IPK mahasiswa : ")
+		fmt.Scan(&ipk)
+		fmt.Print()
+
+		if ipk >= 4.00 {
+			fmt.Print(" Saudara ", mhs, " dari jurusan ", jur, " program studi ", prodi, " dinyatakan lulus dengan predikat CUMLAUDE dengan mendapatkan nilai : ", ipk)
+		} else if ipk >= 3.49 {
+			fmt.Print(" Saudara ", mhs, " dari jurusan ", jur, " program studi ", prodi, " dinyatakan lulus dengan mendapatkan nilai : ", ipk)
+		} else if ipk >= 2.99 {
+			fmt.Print(" Saudara ", mhs, " dari jurusan ", jur, " program studi ", prodi, " dinyatakan mengulang dengan mendapatkan nilai : ", ipk)
+		} else if ipk >= 1.99 {
+			fmt.Print(" Saudara ", mhs, " dari jurusan ", jur, " program studi ", prodi, " dinyatakan tidak lulus dengan mendapatkan nilai : ", ipk)
+		}
+		fmt.Print()
+		fmt.Print("\nIngin coba program lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		if j != "y" && j != "Y" {
+			break
+		}
+
+	}
+	fmt.Println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	fmt.Println("\nTerima kasih telah memakai program ini")
+	fmt.Println("\nMade by Ikkoc_awinata")
+}
