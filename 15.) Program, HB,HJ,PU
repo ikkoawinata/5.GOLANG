@@ -1,0 +1,43 @@
+package main
+
+import (
+	"fmt"
+)
+
+func welcome() {
+	fmt.Println("===========================================================")
+	fmt.Println("    S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("    HARGA BELI, HARGA JUAL, DAN PENDAPATAN UNTUNG ")
+	fmt.Println("           B A H A S A   G O L A N G ")
+	fmt.Println("===========================================================")
+}
+
+func main() {
+	welcome()
+	var hj, hb, pu int
+	var j string
+
+	for {
+		fmt.Print("Masukkan harga beli barang : ")
+		fmt.Scan(&hb)
+		fmt.Print()
+
+		fmt.Print("------- Menghitung Pendapatan Untung -------")
+		pu = hb * 30 / 100
+		fmt.Print("\nHarga belinya ", hb, " * 30/100 = ", pu)
+		fmt.Print("\nNilai dari pendapatan untung = ", pu, " ribu ")
+		fmt.Print()
+
+		fmt.Print("\n------- Menghitung Harga Jual -------\n")
+		hj = pu + hb
+		fmt.Print("\nHarga untuk menjual kembali suatu barang = ", pu, " + ", hb, " = ", hj, " ribu ")
+		fmt.Print("\nIngin coba program lagi [Y/N] : ")
+		fmt.Scan(&j)
+		if j != "Y" && j != "y" {
+			break
+		}
+	}
+	fmt.Println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	fmt.Println("\nTerima kasih telah memakai program ini")
+	fmt.Println("\nMade by Ikkoc_awinata")
+}
