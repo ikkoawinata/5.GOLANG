@@ -1,0 +1,428 @@
+package main
+
+import (
+	"fmt"
+)
+
+func judul() {
+	fmt.Println("================================================================================")
+	fmt.Println("       S E L A M A T   D A T A N G   D I   P R O G R A M ")
+	fmt.Println("                  CONVERT SATUAN BERAT ")
+	fmt.Println("                B A H A S A    G O L A N G")
+	fmt.Println("==================================================================================")
+}
+
+func table() {
+	fmt.Println("================================================================================")
+	fmt.Println("NO |                 SATUAN PANJANG               ")
+	fmt.Println("================================================================================")
+	fmt.Println("1.  | KG (kilogram)       ->   HG (Hektogram)                                 |")
+	fmt.Println("2.  | KG (kilogram)       ->   DAG (Dekagram)                                 |")
+	fmt.Println("3.  | KG (kilogram)       ->   G (Gram)                                       |")
+	fmt.Println("4.  | KG (kilogram)       ->   DG (Desigram)                                  |")
+	fmt.Println("5.  | KG (kilogram)       ->   CG (Centigram)                                 |")
+	fmt.Println("6.  | KG (kilogram)       ->   MG (Miligram)                                  |")
+	fmt.Println("7.  | HG (Hektogram)      ->   KG (kilogram)                                  |")
+	fmt.Println("8.  | HG (Hektogram)      ->   DAG (Dekagram)                                 |")
+	fmt.Println("9.  | HG (Hektogram)      ->   G (Gram)                                       |")
+	fmt.Println("10. | HG (Hektogram)      ->   DG (Desigram)                                  |")
+	fmt.Println("11. | HG (Hektogram)      ->   CG (Centigram)                                 |")
+	fmt.Println("12. | HG (Hektogram)      ->   MG (Miligram)                                  |")
+	fmt.Println("13. | DAG (Dekagram)      ->   KG (kilogram)                                  |")
+	fmt.Println("14. | DAG (Dekagram)      ->   HG (Hektogram)                                 |")
+	fmt.Println("15. | DAG (Dekagram)      ->   G (Gram)                                       |")
+	fmt.Println("16. | DAG (Dekagram)      ->   DG (Desigram)                                  |")
+	fmt.Println("17. | DAG (Dekagram)      ->   CG (Centigram)                                 |")
+	fmt.Println("18. | DAG (Dekagram)      ->   MG (Miligram)                                  |")
+	fmt.Println("19. | G (Gram)            ->   KG (kilogram)                                  |")
+	fmt.Println("20. | G (Gram)            ->   HG (Hektogram)                                 |")
+	fmt.Println("21. | G (Gram)            ->   DAG (Dekagram)                                 |")
+	fmt.Println("22. | G (Gram)            ->   DG (Desigram)                                  |")
+	fmt.Println("23. | G (Gram)            ->   CG (Centigram)                                 |")
+	fmt.Println("24. | G (Gram)            ->   MG (Miligram)                                  |")
+	fmt.Println("25. | DG (Desigram)       ->   KG (kilogram)                                  |")
+	fmt.Println("26. | DG (Desigram)       ->   HG (Hektogram)                                 |")
+	fmt.Println("27. | DG (Desigram)       ->   DAG (Dekagram)                                 |")
+	fmt.Println("28. | DG (Desigram)       ->   G (Gram)                                       |")
+	fmt.Println("29. | DG (Desigram)       ->   CG (Centigram)                                 |")
+	fmt.Println("30. | DG (Desigram)       ->   MG (Miligram)                                  |")
+	fmt.Println("31. | CG (Centigram)      ->   KG (kilogram)                                  |")
+	fmt.Println("32. | CG (Centigram)      ->   HG (Hektogram)                                 |")
+	fmt.Println("33. | CG (Centigram)      ->   DAG (Dekagram)                                 |")
+	fmt.Println("34. | CG (Centigram)      ->   G (Gram)                                       |")
+	fmt.Println("35. | CG (Centigram)      ->   DG (Desigram)                                  |")
+	fmt.Println("36. | CG (Centigram)      ->   MG (Miligram)                                  |")
+	fmt.Println("37. | MG (Miligram)       ->   KG (kilogram)                                  |")
+	fmt.Println("38. | MG (Miligram)       ->   HG (Hektogram)                                 |")
+	fmt.Println("39. | MG (Miligram)       ->   DAG (Dekagram)                                 |")
+	fmt.Println("40. | MG (Miligram)       ->   G (Gram)                                       |")
+	fmt.Println("41. | MG (Miligram)       ->   DG (Desigram)                                  |")
+	fmt.Println("42. | MG (Miligram)       ->   CG (Centigram)                                 |")
+	fmt.Println("================================================================================")
+}
+
+func Gain() {
+	judul()
+
+	var pil int
+	var rumus, user float64
+	var j string
+
+	for {
+		table()
+		fmt.Println("Silahkan pilih sesuai yang anda cari dengan tabel diatas :")
+		fmt.Scan(&pil)
+
+		switch pil {
+		case 1:
+			fmt.Println("------ 1.) KG -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah : ", user, " * 10 = ", rumus)
+			break
+
+		case 2:
+			fmt.Println("------ 2.) KG -> DAG -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100
+			fmt.Println("hasilnya adalah : ", user, " * 100 = ", rumus)
+			break
+
+		case 3:
+			fmt.Println("------ 3.) KG -> G --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 1000
+			fmt.Println("hasilnya adalah : ", user, " * 1000 = ", rumus)
+			break
+
+		case 4:
+			fmt.Println(" ------ 4.) KG -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10000
+			fmt.Println("hasilnya adalah : ", user, " * 10000 = ", rumus)
+			break
+
+		case 5:
+			fmt.Println(" ------ 5.) KG -> CG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100000
+			fmt.Println("hasilnya adalah : ", user, " * 100000 = ", rumus)
+			break
+
+		case 6:
+			fmt.Println(" ------ 6.) KG -> MG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 1000000
+			fmt.Println("hasilnya adalah : ", user, " * 1000000 = ", rumus)
+			break
+
+		case 7:
+			fmt.Println(" ------ 7.) HG -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah : ", user, "/ 10 =  ", rumus)
+			break
+
+		case 8:
+			fmt.Println(" ------ 8.) HG -> DAG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah : ", user, " * 10 =  ", rumus)
+			break
+
+		case 9:
+			fmt.Println(" ------ 9.) HG -> G -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100
+			fmt.Println("hasilnya adalah : ", user, " * 100 =  ", rumus)
+			break
+
+		case 10:
+			fmt.Println(" ------ 10.) HG -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 1000
+			fmt.Println("hasilnya adalah : ", user, " * 1000 = ", rumus)
+			break
+
+		case 11:
+			fmt.Println(" ------ 11.) HG -> CG -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10000
+			fmt.Println("hasilnya adalah : ", user, " * 10000 =  ", rumus)
+			break
+
+		case 12:
+			fmt.Println(" ------ 12.) HG -> MG -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100000
+			fmt.Println("hasilnya adalah : ", user, " * 10000 =  ", rumus)
+			break
+
+		case 13:
+			fmt.Println(" ------ 13.) DAG -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100
+			fmt.Println("hasilnya adalah : ", user, " / 100 = ", rumus)
+			break
+
+		case 14:
+			fmt.Println(" ------ 14.)DAG -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah : ", user, " / 10 = ", rumus)
+			break
+
+		case 15:
+			fmt.Println(" ------ 15.)DAG -> G --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah : ", user, " * 10 =  ", rumus)
+			break
+
+		case 16:
+			fmt.Println(" ------ 16.) DAG -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100
+			fmt.Println("hasilnya adalah : ", user, " * 100 =  ", rumus)
+			break
+
+		case 17:
+			fmt.Println(" ------ 17.) DAG -> CG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 1000
+			fmt.Println("hasilnya adalah : ", user, " * 1000 = ", rumus)
+			break
+
+		case 18:
+			fmt.Println(" ------ 18.) DAG -> MG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10000
+			fmt.Println("hasilnya adalah : ", user, " * 10000 = ", rumus)
+			break
+
+		case 19:
+			fmt.Println(" ------ 19.) G -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 1000
+			fmt.Println("hasilnya adalah : ", user, " / 1000 =  ", rumus)
+			break
+
+		case 20:
+			fmt.Println(" ------ 20.) G -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100
+			fmt.Println("hasilnya adalah :  ", user, " / 100 =  ", rumus)
+			break
+
+		case 21:
+			fmt.Println("  ------ 21.) G -> DAG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah : ", user, " / 10 =  ", rumus)
+			break
+
+		case 22:
+			fmt.Println(" ------ 22.) G -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah : ", user, " * 10 = ", rumus)
+			break
+
+		case 23:
+			fmt.Println("  ------ 23.) G -> CG -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100
+			fmt.Println("hasilnya adalah : ", user, "  * 100 =  ", rumus)
+			break
+
+		case 24:
+			fmt.Println(" ------ 24.) G -> MG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 1000
+			fmt.Println("hasilnya adalah : ", user, " * 1000 = ", rumus)
+			break
+
+		case 25:
+			fmt.Println(" ------ 25.) DG -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10000
+			fmt.Println("hasilnya adalah : ", user, " * 10000 =  ", rumus)
+			break
+
+		case 26:
+			fmt.Println(" ------ 26.) DG -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 1000
+			fmt.Println("hasilnya adalah : %f / 1000 = %f ", user, rumus)
+			break
+
+		case 27:
+			fmt.Println(" ------ 27.) DG -> DAG ---------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100
+			fmt.Println("hasilnya adalah : ", user, " / 100 =  ", rumus)
+			break
+
+		case 28:
+			fmt.Println(" ------ 28.) DG -> G -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah :  ", user, " / 10 =  ", rumus)
+			break
+
+		case 29:
+			fmt.Println(" ------ 29.) DG -> CG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah :  ", user, " * 10 =  ", rumus)
+			break
+
+		case 30:
+			fmt.Println(" ------ 30.) DG -> MG -------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 100
+			fmt.Println("hasilnya adalah : ", user, "  * 100 = ", rumus)
+			break
+
+		case 31:
+			fmt.Println(" ------ 31.) CG -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100000
+			fmt.Println("hasilnya adalah : ", user, "  / 100000 =  ", rumus)
+			break
+
+		case 32:
+			fmt.Println("  ------ 32.) CG -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10000
+			fmt.Println("hasilnya adalah : ", user, " / 10000 =  ", rumus)
+			break
+
+		case 33:
+			fmt.Println(" ------ 33.) CG -> DAG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 1000
+			fmt.Println("hasilnya adalah : ", user, " / 1000 =  ", rumus)
+			break
+
+		case 34:
+			fmt.Println(" ------ 34.) CG -> G --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100
+			fmt.Println("hasilnya adalah : ", user, " / 100 =  ", rumus)
+			break
+
+		case 35:
+			fmt.Println(" ------ 35.) CG -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah : ", user, "  / 10 =  ", rumus)
+			break
+
+		case 36:
+			fmt.Println(" ------ 36.) CG -> MG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user * 10
+			fmt.Println("hasilnya adalah : ", user, "  * 10 =  ", rumus)
+			break
+
+		case 37:
+			fmt.Println(" ----- 37.) MG -> KG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 1000000
+			fmt.Println("hasilnya adalah : ", user, "  / 1000000 =  ", rumus)
+			break
+
+		case 38:
+			fmt.Println("------ 38.) MG -> HG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100000
+			fmt.Println("hasilnya adalah :  ", user, " / 100000 = ", rumus)
+			break
+
+		case 39:
+			fmt.Println("------- 39.) MG -> DAG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10000
+			fmt.Println("hasilnya adalah : ", user, "  / 10000 =  ", rumus)
+			break
+
+		case 40:
+			fmt.Println("------ 40.) MG  -> G --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 1000
+			fmt.Println("hasilnya adalah : ", user, "  / 1000 =  ", rumus)
+			break
+
+		case 41:
+			fmt.Println("------ 41.) MG -> DG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 100
+			fmt.Println("hasilnya adalah : ", user, "  / 100 =  ", rumus)
+			break
+
+		case 42:
+			fmt.Println("------ 42.) MG -> CG --------")
+			fmt.Println("Masukkan angka : ")
+			fmt.Scan(&user)
+			rumus = user / 10
+			fmt.Println("hasilnya adalah : ", user, "  / 10 = ", rumus)
+			break
+
+		default:
+			fmt.Println("Pilihan tidak sesuai dengan tabel ")
+			fmt.Println("Silahkan masukkan pilihan anda sesuai dengan tabel ")
+			break
+
+		}
+		fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+		fmt.Println("Mau coba program lagi ? [Y/N] : ")
+		fmt.Scan(&j)
+		if j != "Y" && j != "y" {
+			break
+		}
+	}
+	fmt.Println("\nTerima kasih telah memakai program ini")
+	fmt.Println("Made by Ikkoc_awinata")
+}
