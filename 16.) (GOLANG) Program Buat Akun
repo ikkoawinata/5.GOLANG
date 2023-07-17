@@ -1,0 +1,81 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"os/exec"
+)
+
+func loginSystem() {
+	fmt.Println("==========================================================")
+	fmt.Println("              SELAMAT DATANG DI PROGRAM                   ")
+	fmt.Println("             PEMBUATAN AKUN DAN PASSWORD                  ")
+	fmt.Println("              B A H A S A   G O L A N G                   ")
+	fmt.Println("==========================================================")
+	var i int
+	var user, pass, login, x, y string
+	var j rune
+
+	for {
+		fmt.Println("Silahkan Buat Akun Dulu yah")
+		fmt.Print("Username : ")
+		fmt.Scanln(&user)
+		fmt.Print("Password : ")
+		fmt.Scanln(&pass)
+		clearScreen()
+		fmt.Println("Akun Sudah Dibuat, Silakan Login Untuk Masuk")
+		for i < 3 {
+			fmt.Print("Username : ")
+			fmt.Scanln(&x)
+			fmt.Print("Password : ")
+			fmt.Scanln(&y)
+
+			if x == user && y == pass {
+				login = "Berhasil"
+				fmt.Println("YEYY ANDA BERHASIL LOGIN")
+				fmt.Println("========================================================")
+				break
+			} else if x != user && y != pass {
+				fmt.Println("Username atau Password Anda Salah")
+				i++
+			}
+		}
+
+		if login == "Berhasil" {
+			clearScreen()
+			fmt.Println("YEEYY ANDA TELAH BERHASIL LOGIN")
+		} else {
+			fmt.Println("Anda Telah 3x Salah Username & Password")
+			fmt.Println("Maaf Akun Anda Kami Blokir Sementara")
+			fmt.Println("Untuk Lebih lanjut, Hubungi Nomor Dia. Jika Tidak Ada Respon Lebih Baik Mundur Saja.")
+		}
+		fmt.Println("\nSekian Dan Terima Kasih")
+		fmt.Println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+		fmt.Println("\nTerima kasih telah memakai program ini")
+		fmt.Println("\nMade by Ikkoc_awinata")
+		fmt.Print("\ncoba program lagi [Y/N] : ")
+		fmt.Scanf("%c", &j)
+		j = toLower(j)
+		if j != 'y' {
+			break
+		}
+
+	}
+}
+
+func clearScreen() {
+	cmd := exec.Command("clear") // For Windows use "cls"
+	cmd.Stdout = os.Stdout
+	cmd.Run()
+}
+
+func toLower(r rune) rune {
+	if r >= 'A' && r <= 'Z' {
+		return r + 32
+	}
+	return r
+}
+
+func main() {
+	loginSystem()
+}
