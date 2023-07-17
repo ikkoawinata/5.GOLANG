@@ -1,0 +1,43 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var input string
+	fmt.Println("=================================================")
+	fmt.Println("              PROGRAM DAYLIGHT TREND")
+	fmt.Println("                  BAHASA GOLANG")
+	fmt.Println("=================================================")
+	fmt.Println()
+	fmt.Print(" ")
+	fmt.Scanln(&input)
+	fmt.Print("\nand i can still see it all  ")
+	fmt.Scanln(&input)
+
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Scanln(&input)
+
+	fmt.Print("\nall of you, all of me  ")
+	fmt.Scanln(&input)
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Scanln(&input)
+
+	fmt.Print("\ni once believed love would be ")
+	fmt.Scanln(&input)
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Println("A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A")
+	fmt.Scanln(&input)
+}
