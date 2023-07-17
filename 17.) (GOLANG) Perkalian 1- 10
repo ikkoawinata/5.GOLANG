@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+)
+
+func judul() {
+	fmt.Println("===============================================================")
+	fmt.Println("       S E L A M A T  D A T A N G  D I  P R O G R A M ")
+	fmt.Println("              MULTIPLICATION / PERKALIAN 1 -10 ")
+	fmt.Println("                B A H A S A    G O L A N G")
+	fmt.Println("===============================================================")
+}
+
+func PERKALIAN() {
+	for i := 1; i <= 10; i++ {
+		for j := 1; j <= 10; j++ {
+			fmt.Print("|", i*j)
+		}
+		fmt.Println("")
+
+	}
+}
+
+func main() {
+	judul()
+	PERKALIAN()
+}
